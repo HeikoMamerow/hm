@@ -1,0 +1,38 @@
+.menu-toggle-on	.menu-container {
+	width: 100%;
+
+	@media (min-width: 640px) {
+		width: 50%;
+	}
+}
+
+.menu-toggle-on .overlay {
+	width: 100%;
+}
+
+/* Tweaks against default list type. */
+.menu {
+	@apply m-20 !important;
+}
+
+.menu-li {
+	padding-left: 0 !important;
+}
+
+.menu-li::before {
+	width: 0 !important;
+}
+
+.menu-li {
+	@apply flex;
+}
+
+.menu-a {
+	@apply flex-auto;
+}
+
+.menu-a:hover {
+		@apply text-gray-100 ;
+		@apply bg-gray-900;
+}
+/*# sourceMappingURL=menu.pcss.map */

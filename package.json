@@ -1,0 +1,41 @@
+{
+  "name": "hm",
+  "version": "1.0.0",
+  "description": "Build WordPress theme for heikomamerow.de",
+  "main": "index.js",
+  "author": "Heiko Mamerow",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.13",
+    "css-declaration-sorter": "^6.0.3",
+    "cssnano": "^5.0.6",
+    "cssnano-preset-advanced": "^5.0.1",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "postcss-conditionals": "^2.1.0",
+    "postcss-mixins": "^7.0.3",
+    "postcss-nested": "^5.0.5",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-responsive-type": "^1.0.0",
+    "postcss-scss": "^3.0.5",
+    "postcss-simple-vars": "^6.0.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-wordpress": "^17.0.0",
+    "tailwindcss": "^2.1.2",
+    "tailwindcss-important": "^1.0.0",
+    "uglifyjs-folder": "^2.0.0"
+  },
+  "scripts": {
+    "uglifyjs": "uglifyjs-folder src/js -eo build/assets/js",
+    "onchange": "onchange src/js/*.js -- npm run uglifyjs",
+    "css-sorting": "postcss src/pcss/**/*.pcss --use css-declaration-sorter --replace --map",
+    "postcss": "postcss -w src/pcss/main.pcss -o build/assets/css/main.css --config postcss.config.js",
+    "browser-sync": "./browser-sync.js",
+    "watch": "npm run postcss & npm run onchange & npm run browser-sync",
+    "start": "npm run css-sorting && npm run watch"
+  }
+}
