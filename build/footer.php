@@ -30,7 +30,8 @@
 				'WordPress',
 			];
 
-			$heart = '<span class="text-hm-red text-xs">&#9829;</span>';
+			// TODO Better solution with haert. Need multiline with onliny hrats between items.
+			$heart = '<span class="text-hm-red">&#9829;</span>';
 
 			echo $heart;
 
@@ -44,8 +45,8 @@
 
 		<p>... and proudly powered for:</p>
 
-		<p class="font-bold"><span class="text-hm-red text-xs">&#9829; &#9829; &#9829;</span> YOU <span
-					class="text-hm-red text-xs">&#9829; &#9829; &#9829;</span></p>
+		<p class="font-bold"><span class="text-hm-red">&#9829; &#9829; &#9829;</span> YOU <span
+					class="text-hm-red">&#9829; &#9829; &#9829;</span></p>
 
 	</div><!-- .site-inner-wrapper -->
 
