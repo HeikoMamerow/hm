@@ -16,6 +16,7 @@
     "postcss": "^8.2.15",
     "postcss-cli": "^8.3.1",
     "postcss-conditionals": "^2.1.0",
+    "postcss-message-helpers": "^2.0.0",
     "postcss-mixins": "^7.0.3",
     "postcss-nested": "^5.0.5",
     "postcss-partial-import": "^4.1.0",
