@@ -19,11 +19,12 @@
 
 	<div class="relative z-20 sm:flex sm:justify-between max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto my-10 sm:my-20">
 
-		<a href="<?php echo get_home_url(); ?>" class="flex items-center place-content-center my-2 auto-cols-max leading-none !no-underline">
+		<a href="<?php echo get_home_url(); ?>"
+		   class="flex items-center place-content-center my-2 auto-cols-max leading-none !no-underline">
 
 			<div class="flex-none object-center object-contain">
 				<object class="mt-0 sm:mt-0.5 h-8 sm:h-9 w-auto mr-1.5 sm:mr-2.5" type="image/svg+xml"
-						data="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg">
+				        data="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg">
 					Logo
 				</object>
 			</div>
@@ -34,35 +35,37 @@
 				</div>
 
 				<div class="flex justify-between space-x-1 text-sm leading-none sm:text-sm tracking-wide sm:tracking-wider sm:leading-none">
-					<span>Webentwicklung</span> <span>mit</span> <span>WordPress</span>
+					<span>Webdevelopment</span> <span>with</span> <span>WordPress</span>
 				</div>
 			</div>
 
 		</a>
 
-		<button id="menu-button" class="menu-button hamburger hamburger--spin-r mx-auto sm:mx-0 block mt-10 sm:mt-0 focus:outline-none" type="button"
-				aria-haspopup="true" aria-controls="menu">
+		<button id="menu-button"
+		        class="menu-button hamburger hamburger--spin-r mx-auto sm:mx-0 block mt-10 sm:mt-0 focus:outline-none"
+		        type="button"
+		        aria-haspopup="true" aria-controls="menu">
 					<span class="hamburger-box w-4 h-4 mr-1.5 sm:mr-2.5">
 						<span class="hamburger-inner w-4"></span>
 					</span>
-			<span class="hamburger-label">Menü</span>
+			<span class="hamburger-label">Menu</span>
 			<span class="hamburger-label-close"></span>
 		</button>
 
 	</div>
 
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'header-menu',
-				'walker'          => new HM_Walker_Nav_Menu(),
-				'container'       => 'nav',
-				'container_class' => 'menu-container absolute z-20 w-0 right-0 overflow-x-hidden transition-width transition-colors duration-500 bg-hm-red bg-opacity-10 uppercase tracking-wide',
-				'items_wrap'      => '<ul id="menu" class="menu">%3$s</ul>',
-				'item_spacing'    => 'discard',
-			)
-		);
-		?>
+	<?php
+	wp_nav_menu(
+		[
+			'theme_location'  => 'header-menu',
+			'walker'          => new HM_Walker_Nav_Menu(),
+			'container'       => 'nav',
+			'container_class' => 'menu-container absolute z-20 w-0 right-0 overflow-x-hidden transition-width transition-colors duration-500 bg-hm-red bg-opacity-10 uppercase tracking-wide',
+			'items_wrap'      => '<ul id="menu" class="menu">%3$s</ul>',
+			'item_spacing'    => 'discard',
+		]
+	);
+	?>
 
 
 </header><!-- #site-header -->
